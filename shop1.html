@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CG Gadget - Shop</title>
+    <link rel="stylesheet" href="project1.css">
+    <script>
+        function addToCart(name, price, image) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ name, price, image });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(name + " has been added to the cart!");
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Our Products</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="shop1.html">Shop</a>
+            <a href="cart1.html">Cart</a>
+            <a href="checkout1.html">Checkout</a>
+            <a href="about1.html">About Us</a>
+        </nav>
+    </header>
+
+    <section class="products">
+        <!-- First Row -->
+        <div class="row">
+            <div class="product">
+                <img src="micro.jpg" alt="USB Charging Cable">
+                <h3>USB Charging Cable</h3>
+                <p>MYR 12.00</p>
+                <button onclick="addToCart('USB Charging Cable',12.00, 'micro.jpg')">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="black.jpg" alt="Black Micro USB">
+                <h3>Black Micro USB</h3>
+                <p>MYR 10</p>
+                <button onclick="addToCart('Black Micro USB', 10, 'black.jpg')">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Second Row -->
+        <div class="row">
+            <div class="product">
+                <img src="lightning.jpg" alt="Power Bank">
+                <h3>Lightning USB</h3>
+                <p>MYR 10</p>
+                <button onclick="addToCart('Lightning USB', 10, 'lightning.jpg')">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="super.jpg" alt="Lightning Supercharge USB">
+                <h3>Lightning Supercharge USB</h3>
+                <p>MYR 12</p>
+                <button onclick="addToCart('Lightning Supercharge USB', 12, 'super.jpg')">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Third Row -->
+        <div class="row">
+            <div class="product">
+                <img src="rapid.jpg" alt="Rapid Cable">
+                <h3>Rapid Cable</h3>
+                <p>MYR 8</p>
+                <button onclick="addToCart('Rapid Cable', 8, 'rapid.jpg')">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="typec.jpg" alt="Type-C USB Cable">
+                <h3>Type-C USB Cable</h3>
+                <p>MYR 12</p>
+                <button onclick="addToCart('Type-C USB Cable', 12, 'typec.jpg')">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Fourth Row -->
+        <div class="row">
+            <div class="product">
+                <img src="earphone.jpg" alt="Earphone BASS G13">
+                <h3>Earphone BASS G13</h3>
+                <p>MYR 15</p>
+                <button onclick="addToCart('Earphone BASS G13',15, 'earphone.jpg')">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="head.jpg" alt="Celebrate Wireless Earphone">
+                <h3>Celebrate Wireless Earphone</h3>
+                <p>MYR 49.90</p>
+                <button onclick="addToCart('Celebrate Wireless Earphone', 49.90, 'head.jpg')">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Last Row (Single Item) -->
+        <div class="row center">
+            <div class="product">
+                <img src="holder.jpg" alt="Phone Holder">
+                <h3>Phone Holder</h3>
+                <p>MYR 20</p>
+                <button onclick="addToCart('Phone Holder', 20, 'holder.jpg')">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+
